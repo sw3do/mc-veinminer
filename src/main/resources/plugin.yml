@@ -1,0 +1,27 @@
+name: VeinMiner
+version: 1.0.0
+main: com.veinminer.VeinMinerPlugin
+api-version: 1.13
+author: sw3do
+description: Advanced vein mining plugin for all Minecraft versions
+website: https://github.com/sw3do/mc-veinminer
+
+commands:
+  veinminer:
+    description: Main vein miner command
+    usage: /veinminer <reload|toggle|config>
+    permission: veinminer.use
+    aliases: [vm, veins]
+
+permissions:
+  veinminer.use:
+    description: Allows using vein miner
+    default: true
+  veinminer.admin:
+    description: Allows admin commands
+    default: op
+  veinminer.bypass:
+    description: Bypasses all restrictions
+    default: op
+
+soft-depend: [WorldGuard, GriefPrevention, Towny, Factions]
