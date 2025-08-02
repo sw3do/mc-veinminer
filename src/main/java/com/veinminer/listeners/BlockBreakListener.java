@@ -50,26 +50,21 @@ public class BlockBreakListener implements Listener {
     
     private boolean shouldProcessVeinMining(Player player, Block block, ItemStack tool) {
         if (!config.isEnabled()) {
-            MessageUtils.sendMessage(player, "&cVeinMiner plugin is disabled!");
             return false;
         }
         
         if (!veinMinerManager.hasVeinMinerEnabled(player)) {
-            MessageUtils.sendMessage(player, "&cVeinMiner is disabled for you! Use /veinminer toggle to enable it.");
             return false;
         }
         
         if (!config.getAllowedBlocks().contains(block.getType())) {
-            MessageUtils.sendMessage(player, "&cBlock type " + block.getType() + " is not allowed for vein mining!");
             return false;
         }
         
         if (config.isRequireSneaking() && !player.isSneaking()) {
-            MessageUtils.sendMessage(player, "&cYou need to sneak (hold shift) to use vein miner!");
             return false;
         }
         
-        MessageUtils.sendMessage(player, "&aVein mining activated!");
         return true;
     }
     
