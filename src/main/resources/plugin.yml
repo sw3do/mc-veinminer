@@ -1,5 +1,5 @@
 name: VeinMiner
-version: 1.0.0
+version: 1.0.1
 main: com.veinminer.VeinMinerPlugin
 api-version: 1.13
 author: sw3do
